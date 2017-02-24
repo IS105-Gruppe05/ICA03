@@ -9,7 +9,6 @@ func TestGreetingASCII(t *testing.T) {
 		t.Fail()
 
 	}
-
 }
 
 func isASCII(s string) bool {

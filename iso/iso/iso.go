@@ -16,9 +16,6 @@ const ASCIIExtended = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\
 	"\xDF\xE0\xE1\xE2\xE3\xE4\xE5\xE6\xE7\xE8\xE9\xEA\xEB\xEC\xED\xEE\xEF\xF0\xF1" +
 	"\xF2\xF3\xF4\xF5\xF6\xF7\xF8\xF9\xFA\xFB\xFC\xFD\xFE\xFF"
 
-//Euro comment
-const Euro = "10000000"
-
 //IterateOverExtendedASCIIStringLiteral comment
 func IterateOverExtendedASCIIStringLiteral(sl string) {
 	// Kode for Oppgave 2a
@@ -26,14 +23,6 @@ func IterateOverExtendedASCIIStringLiteral(sl string) {
 		fmt.Printf("%X %c %b \n", sl[i], sl[i], sl[i])
 	}
 }
-
-//PrintEuro comment
-//func PrintEuro(sl string) {
-//	a byte == 10000000
-//	for i := 0; i < len(a); i++ {
-//		fmt.Printf("%c", a[i])
-//	}
-//}
 
 // Kode for Oppgave 2b
 //func GreetingExtendedASCII()
