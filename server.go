@@ -7,7 +7,9 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
+	"time"
 )
 
 func main() {
@@ -23,7 +25,13 @@ func foo(w http.ResponseWriter, r *http.Request) {
 
 	// Her skriver man data som er respons til brukeren som har skrevet
 	// http://localhost:3000 i sin nettleser
-	w.Write([]byte("<font color=\"green\">Hvordan g\xe5r det, <b>\u16a6</b> ?</font><br/>"))
-	w.Write([]byte("\u16a6 - Thurs<br/>"))
+	w.Write([]byte("<font color=\"green\">Hvordan g\u00E5r det, <b>\u16a6</b> ?</font><br/>"))
+	w.Write([]byte("\u23f0 - Thurs<br/>"))
+	//fmt.Println(time.Now().Format(time.RFC850))
+	w.Write([]byte(time.Now().Format(time.RFC850)))
 
+}
+
+func TimeDate() {
+	fmt.Println(time.Now().Format(time.RFC850))
 }
