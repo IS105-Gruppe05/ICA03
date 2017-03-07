@@ -8,9 +8,9 @@ import "os"
 //jp := "\xE3\x81\xA8\xE5\x8D\x97\xe5\x8c\x97"
 //language := "“norður og suður”
 
-func main()  {
+func main() {
 
 	var t string = os.Args[1]
-	unicode.Translate("nord og sør", t )
+	unicode.Translate("nord og sør", t)
 
 }

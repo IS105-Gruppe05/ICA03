@@ -1,11 +1,13 @@
 package treasure
 
-import "fmt"
-import "bytes"
+import (
+	"bytes"
+	"fmt"
+)
 
 // Kode for Oppgave 3c
 // Bruk strengen fra filen treasure.txt som in-data for denne funksjonen
-const a = "\x48\x65\x6e\x72\x69\x6b\x20\x41\x72\x6e\x6f\x6c\x64\x20\x57\x65" +
+const treasureString = "\x48\x65\x6e\x72\x69\x6b\x20\x41\x72\x6e\x6f\x6c\x64\x20\x57\x65" +
 	"\x72\x67\x65\x6c\x61\x6e\x64\x20\x28\x66\xf8\x64\x74\x20\x31\x37\x2e\x20\x6a" +
 	"\x75\x6e\x69\x20\x31\x38\x30\x38\x2c\x20\x64\xf8\x64\x20\x31\x32\x2e\x20\x6a" +
 	"\x75\x6c\x69\x20\x31\x38\x34\x35\x29\x0a\x56\x69\x20\x65\x72\x65\x20\x65\x6e" +
@@ -34,19 +36,14 @@ const a = "\x48\x65\x6e\x72\x69\x6b\x20\x41\x72\x6e\x6f\x6c\x64\x20\x57\x65" +
 	"\x65\x67\x20\x62\xf8\x64\x0a\x20\x61\x76\x20\x70\x61\x6c\x6d\x65\x72\x20\x6f" +
 	"\x76\x65\x72\x73\x76\x65\x76\x65\x74\x2e\x0a"
 
-//func PrintTreasureUTF8(treasure_string string) []byte {
-	//return []byte{'\xe5'} // returverdien er her kun en stedsholder
+//PrintTreasureUT8. Vi valgte å bruke egen kode ettersom at det var lettere for oss å forstå
+func Replace() {
 
-
-func Replace(){
-
-
-	s := bytes.Replace([]byte (a), []byte("\xe5"), []byte("\xc3\xa5"), -1)
-	e := bytes.Replace([]byte (s), []byte("\xc6"), []byte("\xc3\x86"), -1)
-	r := bytes.Replace([]byte (e), []byte("\xf8"), []byte("\xc3\xb8"), -1)
-	t := bytes.Replace([]byte (r), []byte("\xd8"), []byte("\xc3\x98"), -1)
-	y := bytes.Replace([]byte (t), []byte("\xe6"), []byte("\xc3\xa6"), -1)
-	fmt.Printf("%s\n", bytes.Replace([]byte (y), []byte("\xc6"), []byte("\xc3\x86"), -1))
-
+	s := bytes.Replace([]byte(a), []byte("\xe5"), []byte("\xc3\xa5"), -1)
+	e := bytes.Replace([]byte(s), []byte("\xc6"), []byte("\xc3\x86"), -1)
+	r := bytes.Replace([]byte(e), []byte("\xf8"), []byte("\xc3\xb8"), -1)
+	t := bytes.Replace([]byte(r), []byte("\xd8"), []byte("\xc3\x98"), -1)
+	y := bytes.Replace([]byte(t), []byte("\xe6"), []byte("\xc3\xa6"), -1)
+	fmt.Printf("%s\n", bytes.Replace([]byte(y), []byte("\xc6"), []byte("\xc3\x86"), -1))
 
 }
