@@ -3,15 +3,19 @@ package ascii
 import "testing"
 
 func TestGreetingASCII(t *testing.T) {
-	ascii := GreetingASCII()
+	ascii := ASCIIGreeting
 	if !(isASCII(ascii)) {
+
 		t.Fail()
+
 	}
+
 }
 
 func isASCII(s string) bool {
-	for _, C := range s {
-		if C > 127 {
+
+	for _, c := range s {
+		if c > 127 {
 			return false
 		}
 	}

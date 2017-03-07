@@ -2,7 +2,8 @@ package iso
 
 import "fmt"
 
-const AsciiExtended = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f" +
+//ASCIIExtended comment
+const ASCIIExtended = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f" +
 	"\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f" +
 	` !"#$%&'()*+,-./0123456789:;<=>?` +
 	`@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_` +
@@ -15,19 +16,14 @@ const AsciiExtended = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\
 	"\xDF\xE0\xE1\xE2\xE3\xE4\xE5\xE6\xE7\xE8\xE9\xEA\xEB\xEC\xED\xEE\xEF\xF0\xF1" +
 	"\xF2\xF3\xF4\xF5\xF6\xF7\xF8\xF9\xFA\xFB\xFC\xFD\xFE\xFF"
 
+//IterateOverExtendedASCIIStringLiteral comment
 func IterateOverExtendedASCIIStringLiteral(sl string) {
 	// Kode for Oppgave 2a
 	for i := 0; i < len(sl); i++ {
 		fmt.Printf("%X %c %b \n", sl[i], sl[i], sl[i])
 	}
 }
+⌘
 
-func GreetingExtendedASCII() string {
-	fmt.Println()
-	a :=   "\x22\x53\x61\x6C\x75\x74\x2C\x20\xC7\x61\x20\x76\x61\x20\xB0\x2D\x29\x20\x80\x35\x30\x22"
-	for i := 0; i < len(a); i++ {
-		fmt.Printf("%c", a[i])
-	}
-	fmt.Println()
-	return a
-}
+// Kode for Oppgave 2b
+//func GreetingExtendedASCII()

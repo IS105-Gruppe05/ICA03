@@ -4,9 +4,10 @@ import (
 	"io"
 	"log"
 	"os"
+	"fmt"
 )
 
-func fileToByteslice(filename string) []byte {
+func FileToByteslice(filename string) []byte {
 
 	// Open file for reading
 	file, err := os.Open(filename)
@@ -31,6 +32,8 @@ func fileToByteslice(filename string) []byte {
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Printf("% X, %c", byteSlice, byteSlice)
+
 	return byteSlice
 
 }
