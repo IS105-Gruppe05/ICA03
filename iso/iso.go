@@ -21,3 +21,13 @@ func IterateOverExtendedASCIIStringLiteral(sl string) {
 		fmt.Printf("%X %c %b \n", sl[i], sl[i], sl[i])
 	}
 }
+
+func GreetingExtendedASCII() string {
+	fmt.Println()
+	a :=   "\x22\x53\x61\x6C\x75\x74\x2C\x20\xC7\x61\x20\x76\x61\x20\xB0\x2D\x29\x20\x80\x35\x30\x22"
+	for i := 0; i < len(a); i++ {
+		fmt.Printf("%c", a[i])
+	}
+	fmt.Println()
+	return a
+}
