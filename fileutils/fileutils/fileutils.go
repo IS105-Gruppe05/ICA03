@@ -1,12 +1,14 @@
 package fileutils
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"os"
 )
 
-func fileToByteslice(filename string) []byte {
+func FileToByteslice(filename string) []byte {
+	const a = "\x20"
 
 	// Open file for reading
 	file, err := os.Open(filename)
@@ -31,6 +33,8 @@ func fileToByteslice(filename string) []byte {
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Printf("% X", byteSlice)
+	fmt.Printf("%c", byteSlice)
 	return byteSlice
 
 }

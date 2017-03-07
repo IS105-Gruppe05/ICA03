@@ -3,8 +3,8 @@ package iso
 import "testing"
 
 func TestGreetingExtendedASCIII(t *testing.T) {
-	ascii := GreetingExtendedASCII
-	if !(isASCII(ascii)) {
+	a := isoExtended
+	if !(isASCII(a)) {
 
 		t.Fail()
 
