@@ -1,5 +1,8 @@
 package main
 
+import "./treasure"
+
 //PrintTreasureUTF8 comment
-func Replace() {
+func main() {
+  treasure.Replace()
 }
