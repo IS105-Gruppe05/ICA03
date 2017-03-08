@@ -1,5 +1,5 @@
 package main
 
 //PrintTreasureUTF8 comment
-func PrintTreasureUTF8() {
+func Replace() {
 }
