@@ -39,7 +39,7 @@ const treasureString = "\x48\x65\x6e\x72\x69\x6b\x20\x41\x72\x6e\x6f\x6c\x64\x20
 //PrintTreasureUT8. Vi valgte å bruke egen kode ettersom at det var lettere for oss å forstå
 func Replace() {
 
-	s := bytes.Replace([]byte(a), []byte("\xe5"), []byte("\xc3\xa5"), -1)
+	s := bytes.Replace([]byte(treasureString), []byte("\xe5"), []byte("\xc3\xa5"), -1)
 	e := bytes.Replace([]byte(s), []byte("\xc6"), []byte("\xc3\x86"), -1)
 	r := bytes.Replace([]byte(e), []byte("\xf8"), []byte("\xc3\xb8"), -1)
 	t := bytes.Replace([]byte(r), []byte("\xd8"), []byte("\xc3\x98"), -1)
