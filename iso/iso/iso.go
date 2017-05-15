@@ -3,7 +3,7 @@ package iso
 import "fmt"
 
 //GreetingExtended comment
-const GreetingExtended = "\x22\x53\x61\x6C\x75\x74\x2C\x20\xC7\x61\x20\x76\x61\x20\xB0\x2D\x29\x20\x80\x35\x30\x22"
+const GreetingExtended = "\x22\x53\x61\x6C\x75\x74\x2C\x20\xC7\x61\x20\x76\x61\x20\xB0\x2D\x29\x20\x80\x35\x30\x22\n"
 
 //ASCIIExtended comment
 const ASCIIExtended = 
@@ -21,7 +21,7 @@ func IterateOverExtendedASCIIStringLiteral(sl string) {
 	for i := 0; i < len(sl); i++ {
 		fmt.Printf("%X %c %b \n", sl[i], sl[i], sl[i])
 	}
-	fmt.Printf("%s\n", "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98")
+	
 }
 
 //GreetingExtendedASCII comment
