@@ -6,7 +6,6 @@ Navnliste: Abdikani Gureye, Brede Knutsen Meli, Eirik Aanestad Fintland, Jan Kev
 
 Repository for IS-105 experiments with encoding of signs and symbols.
 
-![Alt Text](url)
 Ica 3. Gruppe 5.
 Oppgave 1: ascii_main.go
 a)
@@ -26,12 +25,34 @@ Vi prøvde å sette inn tegn som ikke var ascii, men da fikk vi bare tilbakemeld
 
 
 
-
-
-
-
-
-
 Oppgave 2:isoMain.go
 a)
+![Bilde5](https://i.gyazo.com/cf301c09caba65e055dadee85481e29f.png)
+![Bilde6](https://i.gyazo.com/08db71ed88d2dad1763351fc91faaa6c.png)
+Her kan vi se forskjellen på forskjellig encoding i selve terminalen, i det øverste bildet bruker terminalen (Git Bash i dette tilfellet) CP-1252 encoding, mens det nederste bruker UTF-8 encoding. Vi kan se at 1252 tillater tegn som ½, mens UTF-8 printer de fleste utvidete ASCII-karakterene, men ikke ½.
+Platformene spiller ikke en stor rolle for vi må å passe på hvilken type terminal vi bruker og hvilken encoding terminalen bruker. 
+
+b)
+![Bilde7](https://i.gyazo.com/67f8c5605785dc466810064826d798ac.png)
+Ubuntu: Se bildene over
+Vi fant ikke ut av hvordan vi skulle få til €(euro tegnet). Vi prøvde ulike innstillinger inne på terminalen der som gjorde at vi fikk opp € tegnet, men da var det andre tegn som ikke virket i stedet for. I encoding CP1252 fikk vi opp €.
+
+ISO-8859-1 kodesett er mer begrenset i forhold til UTF-8 som brukes mer i Golang og andre programmeringsmiljøer. Vesten bruker UTF-8 encoding for det meste og det er kun gamlere programmer som ikke klarer å håndtere utf-8 kodesett, og disse bruker da generelt ascii eller annet kodesett som deres operativsystem støtter.
+
+c) iso_test.go
+Hver karakter har en verdi. I standard ASCII er dette fra 1-127, og utvidet ASCII er over 127. Vi brukte samme test som vi brukte på oppgave 1c, testen ser om verdien til alle tegnene er over 127. På grunn av at alle karakterene ikke er i extended ASCII så blir testen ikke godkjent.
+
+
+
+
+
+
+Oppgave 3: formatering.go
+
+%s formateringen returner en “uninterpreted” byte av stringen eller slicen i UTF-8 (Go-standard), og de symbolene som ikke er i den første ASCII-tegnsettet returneres som “?”.
+Med %q lar Go de tegnene den ikke forstår bare være (“xbd” etc).
+%x returner hexadesimal. Stor X gjør at det returneres i store bokstaver. 
+%c leser en og en karakter og tolker og skriver ut dette.
+
+Så vi ser på ASCII tabellen at bd er ½. Så for å få dette til å fungere med %s, så må den gjøres til UTF-8. Den er \xC2\xBD, og hvis man setter inn dette i koden blir det slikt:
 
