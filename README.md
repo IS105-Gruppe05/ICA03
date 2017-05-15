@@ -16,7 +16,8 @@ Ved å sjekke tabellen på ascii-code.com fant vi ut at de første 31 karakteren
 
 Her er bilde av de 16 første karaktere i ASCII tabellen. 
 
-b) ![Bilde3](https://i.gyazo.com/83e515b1437e4428055e6ce9979cd1f9.png)
+b) 
+![Bilde3](https://i.gyazo.com/83e515b1437e4428055e6ce9979cd1f9.png)
 
 Her kan vi se at tegn som “ og mellomrom også har sine egne ASCII-verdier, som vi kan bruke for å hardkode en setning. I dette tilfellet er det standard ASCII, som vil si at vi ikke trenger å encode setningen noe mer utover dette. 
 
@@ -65,18 +66,25 @@ Med %q lar Go de tegnene den ikke forstår bare være (“xbd” etc).
 %c leser en og en karakter og tolker og skriver ut dette.
 
 Så vi ser på ASCII tabellen at bd er ½. Så for å få dette til å fungere med %s, så må den gjøres til UTF-8. Den er \xC2\xBD, og hvis man setter inn dette i koden blir det slikt:
+
 ![Bilde8](https://i.gyazo.com/582ae218bd06878bbda692380c40a1f6.png)
+
 b) fileutils_main.go
+
 ![Bilde9](https://i.gyazo.com/bef76ce664b684e48cd7ade04a1a3805.png)
 
 ![Bilde10](https://i.gyazo.com/93c89e54abc36f23d23677d14fdb2aad.png)
 ![Bilde11](https://i.gyazo.com/27fc841c241a144bb78200e8aca7b043.png)
 ![Bilde12](https://i.gyazo.com/a702a55ed0a0ffe9eee069636b1fb17c.png)
+
 Vi kan se at lang01 er kyrillisk(vi fikk ikke til riktig output i terminal), lang02 er islandsk og lang03 er norsk. På mac fikk vi til å skrive ut ordene, men ikke riktige bytes. Så vi trur det kan ha noe å gjøre med enkodinga.
 
 De første 16 bytes tilsvarer de første 16 karakterene i printen, dvs. FE FD 73 6B 61 72 0A FE FD 73 6B 61 72 61 6E 61 tilsvarer þ ý s k a r þ ý s k a r a n a þ ý.
+
 c) treasure_main.go
+
 ![Bilde13](https://i.gyazo.com/023de41bf40f235e95fbba72b4f3a6ce.png)
+
 Oppgave 4:
 a) unicode_main.go
 I dette tilfellet bruker vi heksadesimal og unicode.
