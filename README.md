@@ -9,6 +9,7 @@ Repository for IS-105 experiments with encoding of signs and symbols.
 Oppgave 1: ascii_main.go
 a)
 ![Bilde1](https://i.gyazo.com/7a8bcacfacde867cd4e9cf5c352a68fc.png)
+
 Ved å sjekke tabellen på ascii-code.com fant vi ut at de første 31 karakterene i ASCII-tabellen er kontroll-karakterer som ikke kan printes ut. Et eksempel er #24 i lista, hex 18 som er Cancel.
 ![Bilde2](https://i.gyazo.com/f0177cd8b6d6bcea6349d63eb33bba9b.png)
 Her er bilde av de 16 første karaktere i ASCII tabellen. 
