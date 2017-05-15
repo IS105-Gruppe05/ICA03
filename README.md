@@ -6,7 +6,6 @@ Navnliste: Abdikani Gureye, Brede Knutsen Meli, Eirik Aanestad Fintland, Jan Kev
 
 Repository for IS-105 experiments with encoding of signs and symbols.
 
-Ica 3. Gruppe 5.
 Oppgave 1: ascii_main.go
 a)
 ![Bilde1](https://i.gyazo.com/7a8bcacfacde867cd4e9cf5c352a68fc.png)
