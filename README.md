@@ -5,3 +5,5 @@ Navnliste: Abdikani Gureye, Brede Knutsen Meli, Eirik Aanestad Fintland, Jan Kev
 
 
 Repository for IS-105 experiments with encoding of signs and symbols.
+
+![alt text](https://gyazo.com/7a8bcacfacde867cd4e9cf5c352a68fc/to/img.png)
