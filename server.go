@@ -27,9 +27,5 @@ func foo(w http.ResponseWriter, r *http.Request) {
 	// http://localhost:3000 i sin nettleser
 	w.Write([]byte("<font color=\"green\">Hvordan g\u00E5r det, <b>\u16a6</b> ?</font><br/>"))
 	w.Write([]byte("\u23f0 - Thurs<br/>"))
-	//fmt.Println(time.Now().Format(time.RFC850))
 	w.Write([]byte(time.Now().Format(time.RFC850)))
 }
-
-//func TimeDate() {
-//	fmt.Println(time.Now().Format(time.RFC850))
