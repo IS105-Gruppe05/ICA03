@@ -7,3 +7,4 @@ Navnliste: Abdikani Gureye, Brede Knutsen Meli, Eirik Aanestad Fintland, Jan Kev
 Repository for IS-105 experiments with encoding of signs and symbols.
 
 https://cloud.githubusercontent.com/assets/25081110/26049239/92600694-395a-11e7-8b8f-4f5dfdb237a4.png
+![Ica2 bilder ](https://i.gyazo.com/7a8bcacfacde867cd4e9cf5c352a68fc.png)
