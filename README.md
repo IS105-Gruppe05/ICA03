@@ -81,5 +81,6 @@ og deretter kan vi skrive: fmt.Printf(“%c”, x) som vil printe ut “.
 ![Bilde14](https://i.gyazo.com/096212bf993de99c7b1f86748e7ff356.png)
 
 b) server.go
+
 ![Bilde15](https://i.gyazo.com/119098be99ce4c6c59cff862d0dd4738.png)
 
