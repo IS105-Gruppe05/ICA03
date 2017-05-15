@@ -49,10 +49,37 @@ Hver karakter har en verdi. I standard ASCII er dette fra 1-127, og utvidet ASCI
 
 Oppgave 3: formatering.go
 
-%s formateringen returner en “uninterpreted” byte av stringen eller slicen i UTF-8 (Go-standard), og de symbolene som ikke er i den første ASCII-tegnsettet returneres som “?”.
+a)%s formateringen returner en “uninterpreted” byte av stringen eller slicen i UTF-8 (Go-standard), og de symbolene som ikke er i den første ASCII-tegnsettet returneres som “?”.
 Med %q lar Go de tegnene den ikke forstår bare være (“xbd” etc).
 %x returner hexadesimal. Stor X gjør at det returneres i store bokstaver. 
 %c leser en og en karakter og tolker og skriver ut dette.
 
 Så vi ser på ASCII tabellen at bd er ½. Så for å få dette til å fungere med %s, så må den gjøres til UTF-8. Den er \xC2\xBD, og hvis man setter inn dette i koden blir det slikt:
+![Bilde8](https://i.gyazo.com/582ae218bd06878bbda692380c40a1f6.png)
+b) fileutils_main.go
+![Bilde9](https://i.gyazo.com/bef76ce664b684e48cd7ade04a1a3805.png)
+
+![Bilde10](https://i.gyazo.com/93c89e54abc36f23d23677d14fdb2aad.png)
+![Bilde11](https://i.gyazo.com/27fc841c241a144bb78200e8aca7b043.png)
+![Bilde12](https://i.gyazo.com/a702a55ed0a0ffe9eee069636b1fb17c.png)
+Vi kan se at lang01 er kyrillisk(vi fikk ikke til riktig output i terminal), lang02 er islandsk og lang03 er norsk. På mac fikk vi til å skrive ut ordene, men ikke riktige bytes. Så vi trur det kan ha noe å gjøre med enkodinga.
+
+De første 16 bytes tilsvarer de første 16 karakterene i printen, dvs. FE FD 73 6B 61 72 0A FE FD 73 6B 61 72 61 6E 61 tilsvarer þ ý s k a r þ ý s k a r a n a þ ý.
+c) treasure_main.go
+![Bilde13](https://i.gyazo.com/023de41bf40f235e95fbba72b4f3a6ce.png)
+Oppgave 4:
+a) unicode_main.go
+I dette tilfellet bruker vi heksadesimal og unicode.
+Heksadesimaler for: “nord og sør”.
+ Norsk = "\x93\x6e\x6f\x72\x64\x20\x6f\x67\x20\x73\xf8\x72"
+ Islansk = "\u0022\x6e\x6f\x72\u00f0\x75\x72\x20\x6f\x20\x73\x75\u00f0\x75\x72\u0022"
+ Japansk = "\u0022\xe5\x8c\x97\xE3\x81\xA8\xE5\x8D\x97\u0022"
+
+Det går også an å representere karakterer via desimalverdien deres, som f.eks. “ som blir 34 i desimalverdi. Hvis vi vil printe ut 34 som desimal kan vi først definere 34 som en variabel: x:= 34
+og deretter kan vi skrive: fmt.Printf(“%c”, x) som vil printe ut “.
+
+![Bilde14](https://i.gyazo.com/096212bf993de99c7b1f86748e7ff356.png)
+
+b) server.go
+![Bilde15](https://i.gyazo.com/119098be99ce4c6c59cff862d0dd4738.png)
 
