@@ -96,9 +96,9 @@ Heksadesimaler for: “nord og sør”.
 Det går også an å representere karakterer via desimalverdien deres, som f.eks. “ som blir 34 i desimalverdi. Hvis vi vil printe ut 34 som desimal kan vi først definere 34 som en variabel: x:= 34
 og deretter kan vi skrive: fmt.Printf(“%c”, x) som vil printe ut “.
 
-![Bilde14](https://i.gyazo.com/096212bf993de99c7b1f86748e7ff356.png)
+![Bilde14](http://i.imgur.com/dwX7FDe.png)
 
 b) server.go
 
-![Bilde15](https://i.gyazo.com/119098be99ce4c6c59cff862d0dd4738.png)
-
+![Bilde15](http://i.imgur.com/nBuulJC.png)
+Vi hadde dessverre problemer med å vise U+16a6 i nettleser, sannsynligvis pga. font som ikke renderer karakteren skikkelig.
