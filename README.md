@@ -142,7 +142,7 @@ og deretter kan vi skrive: fmt.Printf(“%c”, x) som vil printe ut “.
 ```
 go run server.go
 ```
+Bildet viser tiden da det ble tatt.
 
-Bildet viser
-![Bilde15](http://i.imgur.com/nBuulJC.png)
-Vi hadde dessverre problemer med å vise U+16a6 i nettleser, sannsynligvis pga. font som ikke renderer karakteren skikkelig.
+![Bilde15](https://github.com/IS105-Gruppe05/ICA03/blob/master/Bilder/Oppgave4/Bilde15.png)
+
