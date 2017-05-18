@@ -18,12 +18,7 @@ const ASCIIGreeting = "æøå"
 // følgende format:
 // [ascii-kode heksadesimalt med store bokstaver A-F][mellomrom]
 // [symbol for ascii-kode][mellomrom][ascii-kode binært][linjeskift]
-// Eksempel (bruk denne funksjonen i en main.go fil):
-//	…
-//3E > 111110
-//3F ? 111111
-//40 @ 1000000
-// ...
+
 
 //IterateOverASCIIStringLiteral comment
 func IterateOverASCIIStringLiteral(sl string) {
