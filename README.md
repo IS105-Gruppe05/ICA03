@@ -44,7 +44,7 @@ Platformene spiller ikke en stor rolle for vi må å passe på hvilken type term
 b)
 
 ![Bilde7](https://i.gyazo.com/67f8c5605785dc466810064826d798ac.png)
-
+    (Gammelt filnavn, isomain.go heter nå main.go)
 Ubuntu: Se bildene over
 Vi fant ikke ut av hvordan vi skulle få til €(euro tegnet). Vi prøvde ulike innstillinger inne på terminalen der som gjorde at vi fikk opp € tegnet, men da var det andre tegn som ikke virket i stedet for. I encoding CP1252 fikk vi opp €.
 
