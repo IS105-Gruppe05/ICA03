@@ -23,5 +23,6 @@ func isASCII(s string) bool {
 		}
 
 	}
+	fmt.Println("Inneholder bare ASCII tegn\n")
 	return true
 }

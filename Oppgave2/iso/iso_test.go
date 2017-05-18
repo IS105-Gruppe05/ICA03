@@ -18,10 +18,11 @@ func isASCII(s string) bool {
 
 	for _, c := range s {
 		if c > 127 {
-			fmt.Println("Inneholder bare extended ASCII tegn\n")
+			fmt.Println("Inneholder bare extended ASCII tegn.\n")
 			return true
 		}
 
 	}
+	fmt.Println("Inneholder ikke bare extended ASCII tegn.\n")
 	return false
 }
