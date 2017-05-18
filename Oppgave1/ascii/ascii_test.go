@@ -5,8 +5,8 @@ import ("testing"
 )
 
 func TestGreetingASCII(t *testing.T) {
-	//ascii := ASCII // når denne er aktiv funker den
-	ascii := ASCIIGreeting //Når denne er aktiv får du feilmelling
+
+	ascii := ASCIIGreeting
 	if !(isASCII(ascii)) {
 
 		t.Fail()
