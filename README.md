@@ -15,9 +15,11 @@ go run ascii_main.go
 ![Bilde1](https://i.gyazo.com/7a8bcacfacde867cd4e9cf5c352a68fc.png)
 
 Ved å sjekke tabellen på ascii-code.com fant vi ut at de første 31 karakterene i ASCII-tabellen er kontroll-karakterer som ikke kan printes ut. Et eksempel er #24 i lista, hex 18 som er Cancel.
-![Bilde2](https://i.gyazo.com/f0177cd8b6d6bcea6349d63eb33bba9b.png)
 
 Her er bilde av de 16 første karaktere i ASCII tabellen. 
+![Bilde2](https://i.gyazo.com/f0177cd8b6d6bcea6349d63eb33bba9b.png)
+
+
 
 ## b)
 
@@ -57,7 +59,8 @@ Platformene spiller ikke en stor rolle for vi må å passe på hvilken type term
 
 ![Bilde7](https://i.gyazo.com/67f8c5605785dc466810064826d798ac.png)
 
-Ubuntu: Se bildene over
+Ubuntu: Se bildene i oppgave 2a
+
 Vi fant ikke ut av hvordan vi skulle få til €(euro tegnet). Vi prøvde ulike innstillinger inne på terminalen der som gjorde at vi fikk opp € tegnet, men da var det andre tegn som ikke virket i stedet for. I encoding CP1252 fikk vi opp €.
 
 ISO-8859-1 kodesett er mer begrenset i forhold til UTF-8 som brukes mer i Golang og andre programmeringsmiljøer. Vesten bruker UTF-8 encoding for det meste og det er kun gamlere programmer som ikke klarer å håndtere utf-8 kodesett, og disse bruker da generelt ascii eller annet kodesett som deres operativsystem støtter.
